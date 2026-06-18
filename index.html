@@ -58,8 +58,15 @@
       }
 
       @keyframes backgroundMove {
-         0%, 100% { transform: scale(1) rotate(0deg); }
-         50% { transform: scale(1.1) rotate(5deg); }
+
+         0%,
+         100% {
+            transform: scale(1) rotate(0deg);
+         }
+
+         50% {
+            transform: scale(1.1) rotate(5deg);
+         }
       }
 
       body::after {
@@ -106,8 +113,8 @@
          margin: 0 auto;
          padding: 0 30px;
          display: flex;
-         justify-content: space-between;
          align-items: center;
+         position: relative;
       }
 
       .logo {
@@ -120,6 +127,9 @@
       }
 
       .nav-links {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
          display: flex;
          gap: 30px;
          list-style: none;
@@ -144,8 +154,13 @@
          transition: width 0.3s ease;
       }
 
-      .nav-links a:hover { color: var(--text-primary); }
-      .nav-links a:hover::after { width: 100%; }
+      .nav-links a:hover {
+         color: var(--text-primary);
+      }
+
+      .nav-links a:hover::after {
+         width: 100%;
+      }
 
       .hero {
          min-height: 100vh;
@@ -239,7 +254,9 @@
          transition: left 0.5s ease;
       }
 
-      .contact-link:hover::before { left: 100%; }
+      .contact-link:hover::before {
+         left: 100%;
+      }
 
       .contact-link:hover {
          border-color: var(--primary);
@@ -313,7 +330,9 @@
          transition: transform 0.4s ease;
       }
 
-      .project-card:hover::before { transform: scaleX(1); }
+      .project-card:hover::before {
+         transform: scaleX(1);
+      }
 
       .project-card:hover {
          transform: translateY(-10px);
@@ -343,7 +362,9 @@
          transition: left 0.6s ease;
       }
 
-      .project-card:hover .project-img::after { left: 100%; }
+      .project-card:hover .project-img::after {
+         left: 100%;
+      }
 
       .project-img img {
          width: 70%;
@@ -354,9 +375,13 @@
          filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
       }
 
-      .project-card:hover .project-img img { transform: scale(1.1); }
+      .project-card:hover .project-img img {
+         transform: scale(1.1);
+      }
 
-      .project-content { padding: 25px; }
+      .project-content {
+         padding: 25px;
+      }
 
       .project-title {
          font-size: 1.4rem;
@@ -386,7 +411,9 @@
          overflow: hidden;
       }
 
-      .btn i { font-size: 1.1rem; }
+      .btn i {
+         font-size: 1.1rem;
+      }
 
       .btn-appstore {
          background: linear-gradient(135deg, #0077ED, #00A8E8);
@@ -446,7 +473,9 @@
          transition: transform 0.4s ease;
       }
 
-      .video-card:hover::before { transform: scaleX(1); }
+      .video-card:hover::before {
+         transform: scaleX(1);
+      }
 
       .video-card:hover {
          transform: translateY(-8px);
@@ -473,7 +502,9 @@
          transition: left 0.6s ease;
       }
 
-      .video-card:hover .video-wrapper::after { left: 100%; }
+      .video-card:hover .video-wrapper::after {
+         left: 100%;
+      }
 
       .video-frame {
          width: 100%;
@@ -481,7 +512,9 @@
          border: none;
       }
 
-      .video-info { padding: 20px; }
+      .video-info {
+         padding: 20px;
+      }
 
       .video-title {
          font-size: 1.1rem;
@@ -604,16 +637,38 @@
       }
 
       @media (max-width: 768px) {
-         .hero h1 { font-size: 2.5rem; }
-         .hero-subtitle { font-size: 1.2rem; }
-         .section-title { font-size: 2rem; }
-         .nav-links { display: none; }
-         .projects-grid, .video-grid { grid-template-columns: 1fr; }
+         .hero h1 {
+            font-size: 2.5rem;
+         }
+
+         .hero-subtitle {
+            font-size: 1.2rem;
+         }
+
+         .section-title {
+            font-size: 2rem;
+         }
+
+         .nav-links {
+            display: none;
+         }
+
+         .projects-grid,
+         .video-grid {
+            grid-template-columns: 1fr;
+         }
       }
 
       @keyframes fadeInUp {
-         from { opacity: 0; transform: translateY(30px); }
-         to { opacity: 1; transform: translateY(0); }
+         from {
+            opacity: 0;
+            transform: translateY(30px);
+         }
+
+         to {
+            opacity: 1;
+            transform: translateY(0);
+         }
       }
 
       .fade-in {
@@ -621,12 +676,29 @@
          opacity: 0;
       }
 
-      .fade-in:nth-child(1) { animation-delay: 0.1s; }
-      .fade-in:nth-child(2) { animation-delay: 0.2s; }
-      .fade-in:nth-child(3) { animation-delay: 0.3s; }
-      .fade-in:nth-child(4) { animation-delay: 0.4s; }
-      .fade-in:nth-child(5) { animation-delay: 0.5s; }
-      .fade-in:nth-child(6) { animation-delay: 0.6s; }
+      .fade-in:nth-child(1) {
+         animation-delay: 0.1s;
+      }
+
+      .fade-in:nth-child(2) {
+         animation-delay: 0.2s;
+      }
+
+      .fade-in:nth-child(3) {
+         animation-delay: 0.3s;
+      }
+
+      .fade-in:nth-child(4) {
+         animation-delay: 0.4s;
+      }
+
+      .fade-in:nth-child(5) {
+         animation-delay: 0.5s;
+      }
+
+      .fade-in:nth-child(6) {
+         animation-delay: 0.6s;
+      }
    </style>
 </head>
 
@@ -635,10 +707,11 @@
       <div class="nav-content">
          <div class="logo">MK</div>
          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#media">Media</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#media">Media</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
          </ul>
       </div>
    </nav>
@@ -691,10 +764,12 @@
                <div class="project-content">
                   <h3 class="project-title">Color Ride</h3>
                   <div class="project-links">
-                     <a href="https://apps.apple.com/tr/app/color-ride/id6757914149" class="btn btn-appstore" target="_blank">
+                     <a href="https://apps.apple.com/tr/app/color-ride/id6757914149" class="btn btn-appstore"
+                        target="_blank">
                         <i class="fab fa-apple"></i><span>App Store</span>
                      </a>
-                     <a href="https://play.google.com/store/apps/details?id=com.spoilergames.colorRide" class="btn btn-playstore" target="_blank">
+                     <a href="https://play.google.com/store/apps/details?id=com.spoilergames.colorRide"
+                        class="btn btn-playstore" target="_blank">
                         <i class="fab fa-google-play"></i><span>Play Store</span>
                      </a>
                   </div>
@@ -708,10 +783,12 @@
                <div class="project-content">
                   <h3 class="project-title">Train Pickup</h3>
                   <div class="project-links">
-                     <a href="https://apps.apple.com/tr/app/train-pickup/id6757913212" class="btn btn-appstore" target="_blank">
+                     <a href="https://apps.apple.com/tr/app/train-pickup/id6757913212" class="btn btn-appstore"
+                        target="_blank">
                         <i class="fab fa-apple"></i><span>App Store</span>
                      </a>
-                     <a href="https://play.google.com/store/apps/details?id=com.spoilergames.TrainPickup" class="btn btn-playstore" target="_blank">
+                     <a href="https://play.google.com/store/apps/details?id=com.spoilergames.TrainPickup"
+                        class="btn btn-playstore" target="_blank">
                         <i class="fab fa-google-play"></i><span>Play Store</span>
                      </a>
                   </div>
@@ -725,7 +802,8 @@
                <div class="project-content">
                   <h3 class="project-title">Color Liquid Sort</h3>
                   <div class="project-links">
-                     <a href="https://play.google.com/store/apps/details?id=com.spoilergames.ColorLiquidSort" class="btn btn-playstore" target="_blank">
+                     <a href="https://play.google.com/store/apps/details?id=com.spoilergames.ColorLiquidSort"
+                        class="btn btn-playstore" target="_blank">
                         <i class="fab fa-google-play"></i><span>Play Store</span>
                      </a>
                   </div>
@@ -739,7 +817,8 @@
                <div class="project-content">
                   <h3 class="project-title">İyiliğin Öncüleri</h3>
                   <div class="project-links">
-                     <a href="https://play.google.com/store/apps/details?id=com.tdv.PioneersOfGoodness&hl=tr" class="btn btn-playstore" target="_blank">
+                     <a href="https://play.google.com/store/apps/details?id=com.tdv.PioneersOfGoodness&hl=tr"
+                        class="btn btn-playstore" target="_blank">
                         <i class="fab fa-google-play"></i><span>Play Store</span>
                      </a>
                   </div>
@@ -753,7 +832,8 @@
                <div class="project-content">
                   <h3 class="project-title">Yubu: The Shoeventure</h3>
                   <div class="project-links">
-                     <a href="https://store.steampowered.com/app/2487000/Yubu_The_Shoeventure/" class="btn btn-steam" target="_blank">
+                     <a href="https://store.steampowered.com/app/2487000/Yubu_The_Shoeventure/" class="btn btn-steam"
+                        target="_blank">
                         <i class="fab fa-steam"></i><span>Steam</span>
                      </a>
                   </div>
@@ -767,7 +847,8 @@
                <div class="project-content">
                   <h3 class="project-title">Hidromobil</h3>
                   <div class="project-links">
-                     <a href="https://apps.apple.com/tr/app/hidromobil/id6449743122" class="btn btn-appstore" target="_blank">
+                     <a href="https://apps.apple.com/tr/app/hidromobil/id6449743122" class="btn btn-appstore"
+                        target="_blank">
                         <i class="fab fa-apple"></i><span>App Store</span>
                      </a>
                   </div>
@@ -781,7 +862,8 @@
                <div class="project-content">
                   <h3 class="project-title">Takedown: Raid Master</h3>
                   <div class="project-links">
-                     <a href="https://apps.apple.com/tr/app/takedown-raid-master/id6448749363" class="btn btn-appstore" target="_blank">
+                     <a href="https://apps.apple.com/tr/app/takedown-raid-master/id6448749363" class="btn btn-appstore"
+                        target="_blank">
                         <i class="fab fa-apple"></i><span>App Store</span>
                      </a>
                   </div>
@@ -795,7 +877,8 @@
                <div class="project-content">
                   <h3 class="project-title">Pocket Combat</h3>
                   <div class="project-links">
-                     <a href="https://play.google.com/store/apps/dev?id=6962829002205063970&hl=tr" class="btn btn-playstore" target="_blank">
+                     <a href="https://play.google.com/store/apps/dev?id=6962829002205063970&hl=tr"
+                        class="btn btn-playstore" target="_blank">
                         <i class="fab fa-google-play"></i><span>Play Store</span>
                      </a>
                   </div>
@@ -809,10 +892,12 @@
                <div class="project-content">
                   <h3 class="project-title">RoboArt!</h3>
                   <div class="project-links">
-                     <a href="https://apps.apple.com/tr/app/roboart/id6444862284" class="btn btn-appstore" target="_blank">
+                     <a href="https://apps.apple.com/tr/app/roboart/id6444862284" class="btn btn-appstore"
+                        target="_blank">
                         <i class="fab fa-apple"></i><span>App Store</span>
                      </a>
-                     <a href="https://play.google.com/store/apps/details?id=com.abdurrahmansapoglu.robart&hl=en_AU" class="btn btn-playstore" target="_blank">
+                     <a href="https://play.google.com/store/apps/details?id=com.abdurrahmansapoglu.robart&hl=en_AU"
+                        class="btn btn-playstore" target="_blank">
                         <i class="fab fa-google-play"></i><span>Play Store</span>
                      </a>
                   </div>
@@ -826,7 +911,8 @@
                <div class="project-content">
                   <h3 class="project-title">Soldier Siege</h3>
                   <div class="project-links">
-                     <a href="https://apps.apple.com/tr/app/soldier-siege/id6448024523?platform=iphone" class="btn btn-appstore" target="_blank">
+                     <a href="https://apps.apple.com/tr/app/soldier-siege/id6448024523?platform=iphone"
+                        class="btn btn-appstore" target="_blank">
                         <i class="fab fa-apple"></i><span>App Store</span>
                      </a>
                   </div>
@@ -848,7 +934,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1B9RPY9VQduJGt3D-yJYvfpW4abgcDF7a/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1B9RPY9VQduJGt3D-yJYvfpW4abgcDF7a/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Revolver Wheel</span></div>
@@ -857,7 +945,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1YepIovxLfsBr47RCpXbLG7ROJvUETqRO/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1YepIovxLfsBr47RCpXbLG7ROJvUETqRO/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Soda Sort</span></div>
@@ -866,7 +956,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1HOjyiY8d1BTiiim_Ln-W9EO9pQxRx_IK/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1HOjyiY8d1BTiiim_Ln-W9EO9pQxRx_IK/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Stack Attack!</span></div>
@@ -875,7 +967,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1vOkixnMoj_Zy-hLZCzXvU8xGPsuGMkNx/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1vOkixnMoj_Zy-hLZCzXvU8xGPsuGMkNx/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Roulette Game</span></div>
@@ -884,7 +978,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1Oc6UvcgPL1cVIWi_wyyBinCyzqeGbRdU/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1Oc6UvcgPL1cVIWi_wyyBinCyzqeGbRdU/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Slink Away Clone</span></div>
@@ -893,7 +989,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/18ujzvmtvV2mVjoagCwyF4VVAAHkN0_nq/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/18ujzvmtvV2mVjoagCwyF4VVAAHkN0_nq/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Game Project</span></div>
@@ -902,7 +1000,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1EoY9eVyZ6OgXAi3fm-k_Ej-jgmBuxJKO/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1EoY9eVyZ6OgXAi3fm-k_Ej-jgmBuxJKO/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Game Project</span></div>
@@ -911,7 +1011,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1hDVj3OwxjujRoN3Jvu2rFHu2nsrL_D9L/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1hDVj3OwxjujRoN3Jvu2rFHu2nsrL_D9L/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Game Project</span></div>
@@ -920,7 +1022,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1xJ0ma2iVXsjcx-xcyocpQOcKqPIbZioV/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1xJ0ma2iVXsjcx-xcyocpQOcKqPIbZioV/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Game Project</span></div>
@@ -929,7 +1033,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1GTdECY_WzI9HI31AuB5WRtYaZxVHR3pJ/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1GTdECY_WzI9HI31AuB5WRtYaZxVHR3pJ/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Game Project</span></div>
@@ -938,7 +1044,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1BdGYbdsQKBCxOzkYp0cryMHj2CoG0H5E/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1BdGYbdsQKBCxOzkYp0cryMHj2CoG0H5E/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Game Project</span></div>
@@ -947,7 +1055,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1Eg9GpczuoKVX4Rnn3I5yaUIHbQAsq61X/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1Eg9GpczuoKVX4Rnn3I5yaUIHbQAsq61X/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Game Project</span></div>
@@ -956,7 +1066,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1yfNBfICUM5WE4HjZK9BR6f8uWuTxVk5P/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1yfNBfICUM5WE4HjZK9BR6f8uWuTxVk5P/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Dodgem All</span></div>
@@ -965,7 +1077,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/13KKb2LLq3uUNxMeL9EVDgtGVJgYMHpn7/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/13KKb2LLq3uUNxMeL9EVDgtGVJgYMHpn7/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Pocket Combat</span></div>
@@ -974,7 +1088,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1v_ZkYNOqXN1Db-Ulva3CHuYO5NXK8uwP/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1v_ZkYNOqXN1Db-Ulva3CHuYO5NXK8uwP/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Flip Rush Guys</span></div>
@@ -983,7 +1099,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1YGDhlM9daWzcUvS2_VMPENjbDYpHxsMv/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1YGDhlM9daWzcUvS2_VMPENjbDYpHxsMv/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Domino Shooter</span></div>
@@ -992,7 +1110,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1wxNG9--9M4ej35OkzKaQFYTDeYKTSN3u/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1wxNG9--9M4ej35OkzKaQFYTDeYKTSN3u/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Roll and Dye</span></div>
@@ -1001,7 +1121,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1rVRNYpXX3yrfwLsj6xYLX0Vz9BoJU2tt/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1rVRNYpXX3yrfwLsj6xYLX0Vz9BoJU2tt/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Knife Scrape</span></div>
@@ -1010,7 +1132,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1xdPYM1HvXFXSYt0Wwv5STGPfIs9zAfgr/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1xdPYM1HvXFXSYt0Wwv5STGPfIs9zAfgr/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Koz Runner</span></div>
@@ -1019,7 +1143,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1lzrPyTaF4LXem9fIY9DC-3eDnTzq5ZnE/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1lzrPyTaF4LXem9fIY9DC-3eDnTzq5ZnE/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Carpet Bender</span></div>
@@ -1028,7 +1154,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/129BK--I5L2rDaVCn-M5NNmWhTrX63UGy/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/129BK--I5L2rDaVCn-M5NNmWhTrX63UGy/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>City Loop</span></div>
@@ -1037,7 +1165,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1HZCQ3rlEMZpmkUAJEPW8v-X4E3GvWXyW/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1HZCQ3rlEMZpmkUAJEPW8v-X4E3GvWXyW/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Color Spiral Rush</span></div>
@@ -1046,7 +1176,9 @@
 
             <div class="video-card">
                <div class="video-wrapper">
-                  <iframe class="video-frame" src="https://drive.google.com/file/d/1h2sOhnr0eoP98WCr-W5ks2XM1V6YKqJ-/preview" allow="autoplay"></iframe>
+                  <iframe class="video-frame"
+                     src="https://drive.google.com/file/d/1h2sOhnr0eoP98WCr-W5ks2XM1V6YKqJ-/preview"
+                     allow="autoplay"></iframe>
                </div>
                <div class="video-info">
                   <div class="video-title"><i class="fas fa-play-circle"></i><span>Pool Girl Jump</span></div>
@@ -1124,4 +1256,5 @@
       document.querySelectorAll('.project-card, .video-card').forEach(card => observer.observe(card));
    </script>
 </body>
+
 </html>
